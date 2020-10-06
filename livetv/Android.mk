@@ -1,4 +1,4 @@
-ifneq ($(wildcard packages/apps/TV/Android.mk),packages/apps/TV/Android.mk)
+ifneq ($(wildcard packages/apps/TV/Android.bp),packages/apps/TV/Android.bp)
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26 && echo OK),OK)

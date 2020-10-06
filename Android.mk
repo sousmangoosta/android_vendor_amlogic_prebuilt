@@ -40,7 +40,7 @@ prebuilt_apps := \
     ReadLog \
     BluetoothRemote
 
-ifneq ($(wildcard packages/apps/TV/Android.mk),packages/apps/TV/Android.mk)
+ifneq ($(wildcard packages/apps/TV/Android.bp),packages/apps/TV/Android.bp)
 prebuilt_apps += \
     LiveTv
 endif
