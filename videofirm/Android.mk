@@ -48,7 +48,7 @@ TA_SIGN_AUTO_TOOL := $(TDK_PATH)/ta_export/scripts/sign_ta_auto.py
 endif
 
 $(LOCAL_PREBUILT_MODULE_FILE): PRIVATE_SRC_DIR := $(LOCAL_PATH)/$(LOCAL_SRC_FILES)
-$(LOCAL_PREBUILT_MODULE_FILE): FORCE
+$(LOCAL_PREBUILT_MODULE_FILE):
 	@mkdir -p $(dir $@)
 ifeq ($(TARGET_ENABLE_TA_SIGN), true)
 ifeq ($(TARGET_ENABLE_TA_ENCRYPT), true)
@@ -60,7 +60,4 @@ else #else ifeq ($(TARGET_ENABLE_TA_SIGN), true)
 	cp -uvf $(PRIVATE_SRC_DIR) $@
 endif
 
-FORCE:
-
 include $(BUILD_PREBUILT)
-
